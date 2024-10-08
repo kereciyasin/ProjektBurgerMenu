@@ -127,6 +127,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Context\BurgerMenuContext.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Entities\Admin.cs" />
@@ -1599,6 +1600,7 @@
     <Content Include="regal\vendors\mdi\fonts\materialdesignicons-webfont.ttf" />
     <Content Include="regal\vendors\mdi\fonts\materialdesignicons-webfont.woff" />
     <Content Include="regal\vendors\mdi\fonts\materialdesignicons-webfont.woff2" />
+    <Content Include="Areas\Admin\Views\web.config" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -1627,6 +1629,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Controllers\" />
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Models\" />
     <Folder Include="regal\.git\objects\info\" />
     <Folder Include="regal\.git\objects\pack\" />
