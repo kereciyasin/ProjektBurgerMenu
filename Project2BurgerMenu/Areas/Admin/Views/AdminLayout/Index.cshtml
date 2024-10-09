@@ -7,18 +7,18 @@
 <html lang="en">
 
 <!--Header Start -->
-@Html.Action("PartialHead", "AdminLayout")
+@Html.Action("PartialHead", "AdminLayout", "Admin")
 <!-- End Header -->
 
 <body>
     <div class="container-scroller">
         <!-- partial:../../partials/_navbar.html -->
-       @Html.Action("PartialNavBar", "AdminLayout") 
+       @Html.Action("PartialNavBar", "AdminLayout", "Admin") 
         <!-- partial -->
         <div class="container-fluid page-body-wrapper">
 
             <!-- partial:../../partials/_sidebar.html -->
-            @Html.Action("PartialSidebar", "AdminLayout")   
+            @Html.Action("PartialSidebar", "AdminLayout", "Admin")   
             <!-- partial -->
             <div class="main-panel">
                 <div class="content-wrapper">
