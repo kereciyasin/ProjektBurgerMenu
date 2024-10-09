@@ -9,7 +9,8 @@ namespace Project2BurgerMenu.Areas
 {
     public class CategoryController : Controller
     {
-        BurgerMenuContext db = new BurgerMenuContext(); 
+        BurgerMenuContext db = new BurgerMenuContext();
+        
         public ActionResult CategoryList()
         {
             var values = db.Categories.ToList();    
