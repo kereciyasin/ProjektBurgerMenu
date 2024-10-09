@@ -23,6 +23,11 @@ namespace Project2BurgerMenu.Areas.Admin.Controllers
         {
             return PartialView();
         }
+
+        public PartialViewResult PartialSidebar()
+        {
+            return PartialView();
+        }
     }
 
 

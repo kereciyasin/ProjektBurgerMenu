@@ -1605,6 +1605,7 @@
     <Content Include="Areas\Admin\Views\AdminLayout\Index.cshtml" />
     <Content Include="Areas\Admin\Views\AdminLayout\PartialHead.cshtml" />
     <Content Include="Areas\Admin\Views\AdminLayout\PartialNavBar.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminLayout\PartialSidebar.cshtml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
