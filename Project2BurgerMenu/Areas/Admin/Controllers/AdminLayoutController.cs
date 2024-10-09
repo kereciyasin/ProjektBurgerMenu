@@ -16,7 +16,7 @@ namespace Project2BurgerMenu.Areas.Admin.Controllers
 
         public PartialViewResult PartialHead()
         {
-            return PartialView();
+            return PartialView("PartialHead");
         }
 
         public PartialViewResult PartialNavBar()

@@ -5,12 +5,11 @@ using System.Web;
 using System.Web.Mvc;
 using Project2BurgerMenu.Context;
 
-namespace Project2BurgerMenu.Areas
+namespace Project2BurgerMenu.Areas.Admin.Controllers
 {
     public class CategoryController : Controller
     {
-        BurgerMenuContext db = new BurgerMenuContext();
-        
+        BurgerMenuContext db = new BurgerMenuContext(); 
         public ActionResult CategoryList()
         {
             var values = db.Categories.ToList();    
