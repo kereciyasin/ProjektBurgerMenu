@@ -133,6 +133,7 @@
     <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
     <Compile Include="Context\BurgerMenuContext.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Entities\Admin.cs" />
     <Compile Include="Entities\Category.cs" />
     <Compile Include="Entities\DealOfTheDay.cs" />
@@ -1643,6 +1644,7 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Category\CategoryList.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
