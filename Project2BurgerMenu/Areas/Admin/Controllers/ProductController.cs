@@ -24,6 +24,13 @@ namespace Project2BurgerMenu.Areas.Admin.Controllers
         [HttpGet]
         public ActionResult CreateProduct()
         {
+            List<SelectListItem> values = (from x in db.Categories.ToList()
+                                           select new SelectListItem
+                                           {
+                                               Text = x.CategoryName,
+                                               Value = x.CategoryId.ToString()
+                                           }).ToList();
+            ViewBag.v = values;
             return View();
         }
         [HttpPost]

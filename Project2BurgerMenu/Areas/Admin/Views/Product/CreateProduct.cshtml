@@ -21,8 +21,8 @@
                 <label>Ürün Görsel URL:</label>
                 @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
                 <br />
-                <!--<label>Ürün Kategori:</label>-->
-                @*@ @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.V, new{@class="form-control"}) *@
+                <label>Ürün Kategori:</label>
+                @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.V, new { @class = "form-control" })
                 <br />
                 <label>Ürün Açıklaması:</label>
                 @Html.TextAreaFor(x => x.ProductDescription, 4, 0, new { @class = "form-control" })
