@@ -63,8 +63,12 @@ namespace Project2BurgerMenu.Areas.Admin.Controllers
         [HttpPost]
         public ActionResult UpdateProduct(Product product)
         {
-            db.Products.Add(product);
-            db.Entry(product).State = EntityState.Modified;
+            var value = db.Products.Find(product.ProductId);
+            value.ProductName = product.ProductName;
+            value.ProductDescription = product.ProductDescription;
+            value.ProductPrice = product.ProductPrice;
+            value.ImageUrl = product.ImageUrl;
+            value.CategoryId = product.CategoryId;
             db.SaveChanges();
             return RedirectToAction("ProductList");
 
