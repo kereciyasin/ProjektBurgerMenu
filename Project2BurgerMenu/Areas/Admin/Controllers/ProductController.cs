@@ -40,5 +40,34 @@ namespace Project2BurgerMenu.Areas.Admin.Controllers
             db.SaveChanges();
             return RedirectToAction("ProductList");
         }
+        public ActionResult DeleteProduct(int id)
+        {
+            var product = db.Products.Find(id);
+            db.Products.Remove(product);
+            db.SaveChanges();
+            return RedirectToAction("ProductList");
+        }
+        [HttpGet]
+        public ActionResult UpdateProduct(int id)
+        {
+            var product = db.Products.Find(id);
+            List<SelectListItem> values = (from x in db.Categories.ToList()
+                                           select new SelectListItem
+                                           {
+                                               Text = x.CategoryName,
+                                               Value = x.CategoryId.ToString()
+                                           }).ToList();
+            ViewBag.v = values;
+            return View("EditProduct", product);
+        }
+        [HttpPost]
+        public ActionResult UpdateProduct(Product product)
+        {
+            db.Products.Add(product);
+            db.Entry(product).State = EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("ProductList");
+
+        }
     }
 }
