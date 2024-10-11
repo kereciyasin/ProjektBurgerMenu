@@ -3,25 +3,31 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Project2BurgerMenu.Entities;
 using Project2BurgerMenu.Context;
+using System.Data.Entity;
 
 namespace Project2BurgerMenu.Areas.Admin.Controllers
 {
     public class ProductController : Controller
     {
-        BurgerMenuContext db = new BurgerMenuContext(); 
+        BurgerMenuContext db = new BurgerMenuContext();
         public ActionResult ProductList()
         {
-            var productList = db.Products.ToList();
-            return View(productList);
+            var products = db.Products
+                        .Include(p => p.Category)
+                        .ToList();
+
+            return View(products);
+
         }
         [HttpGet]
-        public ActionResult AddProduct()
+        public ActionResult CreateProduct()
         {
             return View();
         }
         [HttpPost]
-        public ActionResult AddProduct(Entities.Product product)
+        public ActionResult CreateProduct(Product product)
         {
             db.Products.Add(product);
             db.SaveChanges();
