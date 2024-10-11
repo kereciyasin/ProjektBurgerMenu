@@ -9,6 +9,7 @@ using System.Data.Entity;
 
 namespace Project2BurgerMenu.Areas.Admin.Controllers
 {
+    [Authorize]
     public class ProductController : Controller
     {
         BurgerMenuContext db = new BurgerMenuContext();
