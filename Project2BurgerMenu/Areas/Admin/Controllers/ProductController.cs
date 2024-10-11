@@ -48,7 +48,7 @@ namespace Project2BurgerMenu.Areas.Admin.Controllers
             return RedirectToAction("ProductList");
         }
         [HttpGet]
-        public ActionResult UpdateProduct(int id)
+        public ActionResult EditProduct(int id)
         {
             var product = db.Products.Find(id);
             List<SelectListItem> values = (from x in db.Categories.ToList()
@@ -61,7 +61,7 @@ namespace Project2BurgerMenu.Areas.Admin.Controllers
             return View("EditProduct", product);
         }
         [HttpPost]
-        public ActionResult UpdateProduct(Product product)
+        public ActionResult EditProduct(Product product)
         {
             var value = db.Products.Find(product.ProductId);
             value.ProductName = product.ProductName;

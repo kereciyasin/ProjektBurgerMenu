@@ -1,10 +1,8 @@
 ﻿@model Project2BurgerMenu.Entities.Product
-
 @{
     ViewBag.Title = "EditProduct";
     Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
 }
-
 
 <div class="col-12 grid-margin stretch-card">
     <div class="card">
@@ -12,7 +10,7 @@
             <h4 class="card-title">Yeni Ürün Girşi</h4>
 
             <form method="post">
-                @Html.HiddenFor(x => x.ProductId)
+                @Html.HiddenFor(x => x.ProductId)   
                 <label>Ürün Adı:</label>
                 @Html.TextBoxFor(x => x.ProductName, new { @class = "form-control" })
                 <br />
@@ -29,8 +27,9 @@
                 @Html.TextAreaFor(x => x.ProductDescription, 4, 0, new { @class = "form-control" })
                 <br />
 
-                <button class="btn btn-info">Ürün Ekle</button>
+                <button class="btn btn-info">Ürün Güncelle</button>
             </form>
         </div>
     </div>
 </div>
+
