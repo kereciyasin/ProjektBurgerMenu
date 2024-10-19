@@ -28,7 +28,7 @@ namespace Project2BurgerMenu.Controllers
                 FormsAuthentication.SetAuthCookie(values.Username, false);
                 Session["Username"] = values.Username.ToString();
                 /* Index acilsin product kontrollardaki buda admin icinde */
-                return RedirectToAction("Productlist", "Product", new { area = "Admin"});
+                return RedirectToAction("Productlist", "Product", new { area = "Admin" });
             }
             else
             {
