@@ -26,7 +26,7 @@ namespace Project2BurgerMenu.Controllers
             {
                 /* Tarayiciya kayit edilmesin diyorsak false, kayit edilsin diyorsak true */
                 FormsAuthentication.SetAuthCookie(values.Username, false);
-                Session["Username"] = values.Username.ToString();
+                Session["X"] = values.Username.ToString();
                 /* Index acilsin product kontrollardaki buda admin icinde */
                 return RedirectToAction("Productlist", "Product", new { area = "Admin" });
             }
