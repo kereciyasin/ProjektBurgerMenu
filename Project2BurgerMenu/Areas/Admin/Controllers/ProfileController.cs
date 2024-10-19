@@ -20,5 +20,18 @@ namespace Project2BurgerMenu.Areas.Admin.Controllers
             var values = db.Admins.Where(x => x.Username == userName).FirstOrDefault(); 
             return View(values);
         }
+        public ActionResult MyProfileList(Project2BurgerMenu.Entities.Admin admin)
+        {
+            var value = Session["X"];
+            var values = db.Admins.Where(x => x.Username == value.ToString()).FirstOrDefault();
+            values.Name = admin.Name;
+            values.Surname = admin.Surname;
+            values.Username = admin.Username;
+            values.Password = admin.Password;
+            values.Email = admin.Email;
+            db.SaveChanges();
+            return RedirectToAction("Index", "Login");   
+
+        }
     }
 }
