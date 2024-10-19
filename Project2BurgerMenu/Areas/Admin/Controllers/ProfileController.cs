@@ -13,13 +13,16 @@ namespace Project2BurgerMenu.Areas.Admin.Controllers
     public class ProfileController : Controller
     {
         // GET: Admin/Profile
-        BurgerMenuContext db = new BurgerMenuContext(); 
+
+        BurgerMenuContext db = new BurgerMenuContext();
+        [HttpGet]
         public ActionResult MyProfileList()
         {
             var userName = Session["X"]; 
             var values = db.Admins.Where(x => x.Username == userName).FirstOrDefault(); 
             return View(values);
         }
+        [HttpPost]  
         public ActionResult MyProfileList(Project2BurgerMenu.Entities.Admin admin)
         {
             var value = Session["X"];
